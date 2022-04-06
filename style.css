@@ -73,23 +73,24 @@ header nav ul li:hover a {
 
 .searchbox {
     display: flex;
-    margin: 0px 10px 10px 0px;
+    width: 100%;
+    margin-bottom: 3%;
 }
 form {
-    margin: 8px 0 10px 0;
     display: flex;
-    justify-content: flex-start;
+    width: 100%;
 }
 .searchbar {
-    margin: 0px 0px 15px 0px;
     height: 50px;
     border: none;
     padding: 0px 0px 0px 20px;
     border: 1px solid var(--grey);
     font-weight: bold;
+    width: 300px;
 }
 
-.fa-search{
+
+.fa-search {
     display: none;
 }
 
@@ -136,8 +137,10 @@ button {
 }
 
 #filters-box .filters:hover {
-    transition: background-color 1s;
-    background-color: var(--light-blue);
+    background: #0065fc;
+    color: #fff;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
 }
 
 #filters-box .filters .texte {
@@ -186,7 +189,7 @@ i.fas.fa-info {
 
 #host h2 {
     font-size: 23px;
-    margin: 0 0 3% 0;
+    margin: 0 0 2% 0;
 }
 
 #host section {
@@ -209,6 +212,7 @@ i.fas.fa-info {
 #host section .box div {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
 
 #host section .box div article {
@@ -258,7 +262,7 @@ i.fas.fa-info {
 
 #host a {
     font-size: 18px;
-    margin: 4% 0 0 0.5%;
+    margin: 10% 0 0 0.5%;
     font-weight: bold;
     width: 107px;
 }
@@ -395,11 +399,11 @@ aside div article div .star {
 .secondcard1 {
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
     border-radius: 20px;
-    height: 235px;
+    height: 210px;
 }
 
 .secondcard1 img {
-    height: 183px;
+    height: 160px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
 }
@@ -571,15 +575,26 @@ footer .block a:hover {
         background-color: white;
     }
 
+    #host section h2 {
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+
     #host section .box {
         padding: 0px 0px 0px 0px;
     }
+    
     #host section article {
         margin-bottom: 2%;
     } 
+
     br {
         display: none;
     } 
+
+    #host a {
+        margin-top: 8%;
+    }
 
     #activity .container {
         display: flex;
@@ -602,10 +617,16 @@ footer .block a:hover {
         justify-content: space-between;
     }
 }
+
 /* Mobile */
+
 @media screen and (max-width: 768px) {
     body {
         padding: 0px 0px;
+    }
+
+    main {
+        height: auto;
     }
 
     header {
@@ -614,7 +635,21 @@ footer .block a:hover {
     }
     
     .searchbox {
-        justify-content: center;
+        margin-bottom: 5%;
+    }
+
+    .searchbar {
+        border: none;
+        width: 100%;
+    }
+
+    .settings .searchbox form  {
+        border: 2px solid #f2f2f2;
+        border-right: none;
+        border-radius: 16px 16px 16px 16px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 
     button span{
@@ -632,14 +667,17 @@ footer .block a:hover {
         border-radius: 16px 16px 16px 16px;
     }
 
-    input{
-        width: 100%
-        
+    #filters-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 350px;
     }
 
     nav ul li {
-    border-bottom: 4px solid transparent;
-    border-color: var(--grey)
+        border-bottom: 4px solid transparent;
+        border-color: var(--grey)
     }
     nav ul li:hover {
         border-bottom: 4px solid transparent;
@@ -648,16 +686,26 @@ footer .block a:hover {
     }
 
     #host {
-        padding: 0px;
-        margin: 0px;
+        padding:0;
+    }
+    #host aside article {
+        width: 91.5%;
+    }
+    #host aside div{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
-    #host aside {
-        height: 580px;
-        width: 100%;
-        padding: 0;
+    #host aside h2{
+        margin: 3px;
     }
 
+
+    #host h2 {
+        margin: 15px;
+    }
 
     header #logo {
         margin: auto;
@@ -669,7 +717,7 @@ footer .block a:hover {
 
     #host section .box div {
         flex-direction: column;
-        margin: 0;
+        margin: 0px 0px 0px 0px;
         justify-content: space-between;
         height: 650px;
         width: 100%;
@@ -681,26 +729,60 @@ footer .block a:hover {
     }
 
     #host section .box div article {
-        width: 96%;
+        width: 93%;
         margin: 0 0 0 1.5%; 
     }
 
     header nav ul {
-    margin: 0px -20px;
-    padding: 0;
+        margin: 0px -20px;
+        padding: 0;
 }
 
     header nav ul li {
-    width: 50%;
-    padding: 20px;
-    text-align: center;
-    margin: 0px;
+        width: 50%;
+        padding: 20px;
+        text-align: center;
+        margin: 0px;
 }
-    #activity .box1 {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid red;
+    #activity{
+        height: 1360px;
+        margin: 45px 15px 0 15px;
     }
 
+    #activity article, .secondcard4 {
     
+        margin: 10px 0px 10px 0px;
+    
+    }
+
+    .box1 .firstcard img, .box2 .firstcard img, .secondcard1 img, .secondcard2 img, .secondcard3 img, .secondcard4 img {
+        height: 75%;
+    }
+
+    .box1 .firstcard, .box2 .firstcard, .secondcard, .secondcard1 ,.secondcard2, .secondcard3, .secondcard4 {
+        height: 200px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .box1 .firstcard, .box2 .firstcard, .secondcard1 ,.secondcard2, .secondcard3, .secondcard4 {
+        margin: 10px 0px 10px 0px;
+    }
+
+    .box1, .box2 {
+        height: 200px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    footer {
+        margin-top: 20%;
+        flex-direction: column;
+    }
+
+    footer .block li {
+        width: 260px;
+    }
 }
+
