@@ -76,6 +76,10 @@ header nav ul li:hover a {
     width: 100%;
     margin-bottom: 3%;
 }
+
+.searchbox button i {
+    display: none;
+}
 form {
     display: flex;
     width: 100%;
@@ -87,11 +91,6 @@ form {
     border: 1px solid var(--grey);
     font-weight: bold;
     width: 300px;
-}
-
-
-.fa-search {
-    display: none;
 }
 
 button {
@@ -127,7 +126,6 @@ button {
     background-color: var(--light-blue);
     height: 50px;
     width: 50px;
-    display: inline-block;
     border-radius: 100%;
     color: var(--blue);
     display: flex;
@@ -656,8 +654,8 @@ footer .block a:hover {
         display: none;
     }
 
-    .fa-search{
-        display: inline;
+    .searchbox button i {
+        display: block;
     }
 
     button{
